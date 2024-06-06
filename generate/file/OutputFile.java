@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Controls the output file and formats data to be the proper output
+ * Controls the file.output file and formats data to be the proper file.output
  */
 public class OutputFile {
     private final List<String> contents = new ArrayList<>();
@@ -22,7 +22,7 @@ public class OutputFile {
     }
 
     /**
-     * Generates the desired output file based off of the input file
+     * Generates the desired file.output file based off of the input file
      * @param input List of each line from the input file
      * @param environmentList List of each environment that the checklist will generate for
      * @throws IOException

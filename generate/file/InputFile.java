@@ -23,7 +23,7 @@ public class InputFile {
     }
 
     private void setContents() throws FileNotFoundException {
-        File file = new File("input.txt");
+        File file = new File("file/input.txt");
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -44,7 +44,7 @@ public class InputFile {
     }
 
     public String getOutputPath() {
-        return taskId != null ? "output/" + taskId + ".txt" : "output.txt";
+        return taskId != null ? "file/output/" + taskId + ".txt" : "file/output.txt";
     }
 
     public List<Environment> getEnvironments() {

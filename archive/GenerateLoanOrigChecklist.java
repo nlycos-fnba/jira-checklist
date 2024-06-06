@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class GenerateLoanOrigChecklist {
     public static void main(String[] args) {
-        File inputFile = new File("input.txt");
-        File outputFile = new File("output.txt");
+        File inputFile = new File("file/input.txt");
+        File outputFile = new File("file/output.txt");
         try {
             Scanner inputScanner = new Scanner(inputFile);
             FileWriter outputFileWriter = new FileWriter(outputFile);

@@ -7,7 +7,7 @@ public class GenerateChecklist {
     public static void main(String[] args) {
         try {
             InputFile inputFile = new InputFile();
-            OutputFile defaultOutput = new OutputFile("output.txt");
+            OutputFile defaultOutput = new OutputFile("file/output.txt");
             OutputFile outputFile = new OutputFile(inputFile.getOutputPath());
 
             outputFile.generateOutputFile(inputFile.getContents(), inputFile.getEnvironments());
