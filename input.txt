@@ -1,0 +1,17 @@
+SD-8394
+--Development--
+--Staging--
+Impersonate khall
+
+__Loan Orig__
+
+Search for **Account Number 301701**
+Verify the search bar at the top left still displays "Account Number 301701"
+
+__Broker Worklist__
+
+Click the "New" button
+Verify a form appears
+
+Create a new Contact
+Verify the contact is created

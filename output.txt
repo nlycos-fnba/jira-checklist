@@ -1,0 +1,20 @@
+**Development**
+1) Impersonate khall
+2) Go to the Development Loan Origination application at: https://backwoods.fnba.com/apps/loan-orignation/applications/applications.jsp?app=LoanOrig
+3) Search for **Account Number 301701**
+- Verify the search bar at the top left still displays "Account Number 301701"
+4) Go to the Development Broker Worklist application at: https://backwoods.fnba.com/apps/loan-origination/applications/applications.jsp?app=LoanManage#report:brokerWorklist
+5) Click the "New" button
+- Verify a form appears
+6) Create a new Contact
+- Verify the contact is created
+**Staging**
+1) Impersonate khall
+2) Go to the Staging Loan Origination application at: https://enyar.fnba.com/apps/loan-orignation/applications/applications.jsp?app=LoanOrig
+3) Search for **Account Number 301701**
+- Verify the search bar at the top left still displays "Account Number 301701"
+4) Go to the Staging Broker Worklist application at: https://enyar.fnba.com/apps/loan-origination/applications/applications.jsp?app=LoanManage#report:brokerWorklist
+5) Click the "New" button
+- Verify a form appears
+6) Create a new Contact
+- Verify the contact is created
