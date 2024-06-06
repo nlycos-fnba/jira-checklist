@@ -1,17 +1,22 @@
 package generate.utils;
 
+/**
+ * Class that controls the names and routes for different FNBA apps
+ */
 public class App {
     public static final String LOAN_ORIG = "Loan Origination";
     public static final String LOAN_ORIG_APP = "apps/loan-orignation/applications/applications.jsp?app=LoanOrig";
+
     public static final String LOAN_MANAGE = "Loan Origination Management";
     public static final String LOAN_MANAGE_APP = "apps/loan-origination/applications/applications.jsp?app=LoanManage";
+
     public static final String BROKER_WORKLIST = "Broker Worklist";
     public static final String BROKER_WORKLIST_APP = LOAN_MANAGE_APP + "#report:brokerWorklist";
 
     private final String appName;
     private final String link;
 
-    public App(String appName) {
+    private App(String appName) {
         this.appName = appName;
         this.link = switch (appName) {
             case LOAN_ORIG -> LOAN_ORIG_APP;
@@ -29,6 +34,11 @@ public class App {
         return String.format("https://%s.fnba.com/%s", Environment.getServer(context), link);
     }
 
+    /**
+     * Factory method to return App object
+     * @param line Input line from the file. Used to generate proper routing in App object
+     * @return App object to be used for routing
+     */
     public static App getApp(String line) {
         line = line.toLowerCase().replaceAll("__", "").trim();
         return new App(switch (line) {

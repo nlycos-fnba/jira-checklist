@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Controls the output file and formats data to be the proper output
+ */
 public class OutputFile {
     private final List<String> contents = new ArrayList<>();
     private final FileWriter fileWriter;
@@ -18,6 +21,12 @@ public class OutputFile {
         this.fileWriter = new FileWriter(file);
     }
 
+    /**
+     * Generates the desired output file based off of the input file
+     * @param input List of each line from the input file
+     * @param environmentList List of each environment that the checklist will generate for
+     * @throws IOException
+     */
     public void generateOutputFile(List<String> input, List<Environment> environmentList) throws IOException {
         this.setContents(input, environmentList);
         this.writeOutput();
@@ -47,8 +56,8 @@ public class OutputFile {
             String line = input.get(lineNumber);
 
             if (line.startsWith("__") && line.endsWith("__")) {
-                App newApp = App.getApp(line);
-                output.add(String.format("%d) Go to the %s %s application at: %s", count++, environment, newApp.getAppName(), newApp.getLink(environment)));
+                App app = App.getApp(line);
+                output.add(String.format("%d) Go to the %s %s application at: %s", count++, environment, app.getAppName(), app.getLink(environment)));
             }
             else if (lineNumber == 0 || (input.get(lineNumber - 1).isEmpty())) {
                 output.add(String.format("%d) %s", count++, line));

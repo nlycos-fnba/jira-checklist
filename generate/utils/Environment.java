@@ -1,5 +1,8 @@
 package generate.utils;
 
+/**
+ * Class to control which environments the checklist is generated for
+ */
 public class Environment {
     public static final String DEVELOPMENT = "Development";
     public static final String STAGING = "Staging";
@@ -7,7 +10,7 @@ public class Environment {
 
     private final String environmentName;
 
-    public Environment(String environmentName) {
+    private Environment(String environmentName) {
         this.environmentName = getContext(environmentName);
     }
 
@@ -29,6 +32,11 @@ public class Environment {
         };
     }
 
+    /**
+     * Factory method to return an Environment object
+     * @param environment Takes line from input file
+     * @return Environment object based off the environment input param
+     */
     public static Environment getEnvironment(String environment) {
         environment = environment.toLowerCase().replaceAll("--", "").trim();
         return new Environment(switch (environment) {

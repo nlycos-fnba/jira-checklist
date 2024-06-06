@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Controls the input file and creates the initial list of items for each line in the input.txt
+ */
 public class InputFile {
     private final List<String> contents = new ArrayList<>();
     private final List<Environment> environments;
